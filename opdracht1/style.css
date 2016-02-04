@@ -1,0 +1,31 @@
+h1 {
+	font-size: 3em;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+img {
+	width: 100%;
+}
+nav li {
+	background: rgb(128, 128, 128);
+	border:0.1rem solid rgba(0,0,0,0.5);
+}
+svg {
+	width:1.5em;
+}
+header,nav > ul, nav li>a{
+	display:flex;
+	align-items:center;
+}
+header,nav > ul {
+	flex-wrap: wrap;
+}
+header nav li {
+	padding: 0 1rem;
+}
+header figure {
+	width: 5.3em;
+}
