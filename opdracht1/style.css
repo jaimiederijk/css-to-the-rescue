@@ -1,7 +1,14 @@
 body {
 	font-family: Ampersand, 'Open Sans', sans-serif;
 }
-
+a {
+	color: currentColor;
+	text-decoration: none;
+	padding: 0 1rem;
+}
+a:hover {
+	background-color: rgb(145, 145, 179);
+}
 h1 {
 	font-size: 3em;
 }
@@ -21,7 +28,7 @@ nav li {
 	border:0.1rem solid rgba(0,0,0,0.5);
 }
 svg {
-	width:1.5em;
+	width: 1.5em;
 	height: 1.5em;
 }
 
@@ -29,17 +36,20 @@ header {
 	background-color: rgb(233, 235, 217);
 }
 header,nav > ul, nav li>a, footer > ul , main{
-	display:flex;
-	align-items:center;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
 }
 header,nav > ul ,footer > ul, main{
 	flex-wrap: wrap;
 }
 header nav li {
-	padding: 0 1rem;
 	margin: 0.2rem;
 }
 header figure {
+
+}
+#profile-img {
 	width: 5.3em;
 }
 
