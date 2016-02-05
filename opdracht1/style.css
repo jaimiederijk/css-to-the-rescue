@@ -1,5 +1,12 @@
+body {
+	font-family: Ampersand, 'Open Sans', sans-serif;
+}
+
 h1 {
 	font-size: 3em;
+}
+article p , footer a{
+	font-size: 1.3em;
 }
 ul {
     padding: 0;
@@ -15,17 +22,66 @@ nav li {
 }
 svg {
 	width:1.5em;
+	height: 1.5em;
 }
-header,nav > ul, nav li>a{
+
+header {
+	background-color: rgb(233, 235, 217);
+}
+header,nav > ul, nav li>a, footer > ul , main{
 	display:flex;
 	align-items:center;
 }
-header,nav > ul {
+header,nav > ul ,footer > ul, main{
 	flex-wrap: wrap;
 }
 header nav li {
 	padding: 0 1rem;
+	margin: 0.2rem;
 }
 header figure {
 	width: 5.3em;
+}
+
+main, footer {
+	margin: auto;
+}
+
+article {
+	max-width: 40em;
+	margin: 0.5rem;
+	background-color: rgb(233, 235, 217);
+}
+article > *{
+	padding: 0.5rem;
+}
+
+footer {
+	max-width: 40em;
+}
+footer nav li {
+	padding: 0.1rem;
+	margin: 0.1rem;
+}
+footer address {
+	width: 10em;
+    margin: auto;
+}
+footer > ul a {
+	margin: 0.5rem;
+}
+
+@font-face {
+	font-family: Ampersand;
+	src: 	local('Baskerville-Italic'),
+			local('Palatino-Italic'),
+			local('BookAntiqua-Italic'),
+			local('GoudyOldStyleT-Italic');
+	unicode-range:U+26;
+}
+
+@media (max-width: 600px) {
+	html { 
+		font-size: 12px; 
+	}
 }
