@@ -1,0 +1,110 @@
+@font-face {
+	font-family: Ampersand;
+	src: 	local('Baskerville-Italic'),
+			local('Palatino-Italic'),
+			local('BookAntiqua-Italic'),
+			local('GoudyOldStyleT-Italic');
+	unicode-range:U+26;
+}
+
+
+/*basic*/
+* {
+	font-family: Ampersand, 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+}
+html {
+	font-size: 0.8rem;
+}
+h1 {
+	font-size: 3em;
+}
+a {
+	color: currentColor;
+	text-decoration: none;
+	padding: 0 1rem;
+}
+a:hover {
+	background-color: rgb(145, 145, 179);
+}
+article p , footer a{
+	font-size: 1.3em;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+nav li {
+	background: rgb(128, 128, 128);
+	border:0.1rem solid rgba(0,0,0,0.5);
+}
+
+
+/*images*/
+svg {
+	width: 1.5em;
+	height: 1.5em;
+}
+img {
+	width: 100%;
+}
+#profile-img {
+	width: 5.3em;
+}
+
+
+/*header*/
+header {
+	background-color: rgb(233, 235, 217);
+}
+header,nav > ul, nav li>a, footer > ul , main{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+header,nav > ul ,footer > ul, main{
+	flex-wrap: wrap;
+}
+header nav li {
+	margin: 0.2rem;
+}
+header figure {
+
+}
+
+
+/*article*/
+article {
+	max-width: 40em;
+	margin: 0.5rem;
+	background-color: rgb(233, 235, 217);
+}
+article > *{
+	padding: 0.5rem;
+}
+
+
+/*footer*/
+footer {
+	max-width: 40em;
+	margin: auto;
+}
+footer nav li {
+	padding: 0.1rem;
+	margin: 0.1rem;
+}
+footer address {
+	width: 10em;
+    margin: auto;
+}
+footer > ul a {
+	margin: 0.5rem;
+}
+
+
+/*mediaqueries*/
+@media (min-width: 35.625em) { /* 570px */
+	html {
+		font-size: 1rem;
+	}
+}
