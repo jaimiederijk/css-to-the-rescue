@@ -6,8 +6,17 @@
 			local('GoudyOldStyleT-Italic');
 	unicode-range:U+26;
 }
-body {
-	font-family: Ampersand, 'Open Sans', sans-serif;
+
+
+/*basic*/
+* {
+	font-family: Ampersand, 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+}
+html {
+	font-size: 0.8rem;
+}
+h1 {
+	font-size: 3em;
 }
 a {
 	color: currentColor;
@@ -17,9 +26,6 @@ a {
 a:hover {
 	background-color: rgb(145, 145, 179);
 }
-h1 {
-	font-size: 3em;
-}
 article p , footer a{
 	font-size: 1.3em;
 }
@@ -28,18 +34,26 @@ ul {
     margin: 0;
     list-style-type: none;
 }
-img {
-	width: 100%;
-}
 nav li {
 	background: rgb(128, 128, 128);
 	border:0.1rem solid rgba(0,0,0,0.5);
 }
+
+
+/*images*/
 svg {
 	width: 1.5em;
 	height: 1.5em;
 }
+img {
+	width: 100%;
+}
+#profile-img {
+	width: 5.3em;
+}
 
+
+/*header*/
 header {
 	background-color: rgb(233, 235, 217);
 }
@@ -57,14 +71,9 @@ header nav li {
 header figure {
 
 }
-#profile-img {
-	width: 5.3em;
-}
 
-main, footer {
-	margin: auto;
-}
 
+/*article*/
 article {
 	max-width: 40em;
 	margin: 0.5rem;
@@ -74,8 +83,11 @@ article > *{
 	padding: 0.5rem;
 }
 
+
+/*footer*/
 footer {
 	max-width: 40em;
+	margin: auto;
 }
 footer nav li {
 	padding: 0.1rem;
@@ -89,8 +101,10 @@ footer > ul a {
 	margin: 0.5rem;
 }
 
-@media (max-width: 600px) {
+
+/*mediaqueries*/
+@media (min-width: 35.625em) { /* 570px */
 	html {
-		font-size: 12px; 
+		font-size: 1rem;
 	}
 }
