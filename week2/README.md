@@ -1,5 +1,5 @@
 # CSS-to-the-Rescue
 
-## Opdracht 1
+## Opdracht 2
 
-Link: http://www.jaimiederijk.nl/minorweb/csstotherescue/
+Link: http://www.jaimiederijk.nl/minorweb/csstotherescue2/
