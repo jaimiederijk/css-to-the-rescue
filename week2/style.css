@@ -46,10 +46,17 @@ svg {
 	height: 1.5em;
 }
 img {
-	width: 100%;
+	max-width: 80vw;
+	/*width: 100%;*/
 }
 #profile-img {
 	width: 5.3em;
+	border-radius: 3em;
+}
+figure {
+	max-width: -webkit-min-content;
+	max-width: -moz-min-content;
+	max-width: min-content;
 }
 
 
@@ -73,6 +80,11 @@ header figure {
 }
 
 
+main {
+	align-items: flex-start;
+}
+
+
 /*article*/
 article {
 	max-width: 40em;
@@ -82,7 +94,54 @@ article {
 article > *{
 	padding: 0.5rem;
 }
+article figure {
+	width: min-content;
+}
 
+#profile-picture {
+	display: none;
+}
+#profile-picture img {
+	border-radius: 3em;
+}
+#profile-picture:target {
+	animation: highlight 1s ease; 
+	display: block;
+}
+
+
+#password {
+	position: absolute;
+	top: 7em;
+    left: 50%;
+    transform: translateX(-50%);
+	display: none;
+}
+#password:target {
+	animation: highlight 1s ease; 
+	display: block;
+	box-shadow: 0 0 0 50vmax rgba(0,0,0, .5);
+}
+#password header {
+	justify-content: space-between;
+}
+
+
+#photo-albums {
+	display: none;
+}
+#photo-albums:target {
+	animation: highlight 1s ease; 
+	display: block;
+}
+@keyframes highlight {
+  0% {  
+  	background-color: rgb(246, 255, 174); 
+  }
+  100% { 
+  	background-color: rgb(233, 235, 217); 
+  }
+}
 
 /*footer*/
 footer {
@@ -106,5 +165,8 @@ footer > ul a {
 @media (min-width: 35.625em) { /* 570px */
 	html {
 		font-size: 1rem;
+	}
+	img {
+		max-width: 35em;
 	}
 }
