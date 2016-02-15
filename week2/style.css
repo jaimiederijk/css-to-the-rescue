@@ -119,7 +119,7 @@ article header {
 	background-color: #BFB189;
 }
 article:first-of-type {
-	align-self:center;
+	align-self:center;	/*<-- vertical centering	*/
 }
 
 
