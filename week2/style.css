@@ -84,6 +84,9 @@ header nav li {
 	-moz-box-shadow: 0px 10px 10px -9px rgba(0,0,0,0.75);
 	box-shadow: 0px 10px 10px -9px rgba(0,0,0,0.75);
 }
+header nav li:hover {
+	background-color:#AEAE92;
+} 
 header nav li:last-of-type {
 	margin-bottom:1rem;
 }
@@ -115,8 +118,8 @@ article header {
 	display: block;
 	background-color: #BFB189;
 }
-article figure {
-	
+article:first-of-type {
+	align-self:center;
 }
 
 
@@ -195,7 +198,17 @@ input {
     padding: 0.5rem; 
     margin-left: -0.5rem;
 }
-
+.filter-effects {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.filter-effects figure {
+	width: 30%;
+}
+.filter-effects img ,.filter-effects figcaption {
+	width:100%;
+}
 
 /*pasword article*/
 #password {
@@ -221,6 +234,9 @@ input {
 /*photos article*/
 #photo-albums {
 	display: none;
+	max-width: -webkit-min-content;
+	max-width: -moz-min-content;
+	max-width: min-content;
 }
 #photo-albums:target {
 	animation: highlight 1s ease; 
@@ -238,10 +254,12 @@ input {
 
 /*footer*/
 footer {
+	padding: 2em 0;
 	max-width: 40em;
 	margin: auto;
 }
 footer nav li {
+	width:auto;
 	padding: 0.1rem;
 	margin: 0.1rem;
 }
