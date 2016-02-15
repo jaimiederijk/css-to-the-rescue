@@ -1,10 +1,11 @@
 @font-face {
-	font-family: Ampersand;
-	src: 	local('Baskerville-Italic'),
-			local('Palatino-Italic'),
-			local('BookAntiqua-Italic'),
-			local('GoudyOldStyleT-Italic');
+	font-family:Ampersand;
+	src:local('Baskerville'),
+		local('Goudy Old Style'),
+		local('Palatino'),
+		local('Book Antiqua');
 	unicode-range:U+26;
+	font-style: italic;
 }
 
 
@@ -15,17 +16,21 @@
 html {
 	font-size: 0.8rem;
 }
+body {
+	margin: 0;
+	background-color: #F8F8E3;
+}
 h1 {
-	font-size: 3em;
+	font-size: 2.5em;
 }
 a {
 	color: currentColor;
 	text-decoration: none;
 	padding: 0 1rem;
 }
-a:hover {
+/*a:hover {
 	background-color: rgb(145, 145, 179);
-}
+}*/
 article p , footer a{
 	font-size: 1.3em;
 }
@@ -35,8 +40,7 @@ ul {
     list-style-type: none;
 }
 nav li {
-	background: rgb(128, 128, 128);
-	border:0.1rem solid rgba(0,0,0,0.5);
+	width: 100%;
 }
 
 
@@ -44,6 +48,8 @@ nav li {
 svg {
 	width: 1.5em;
 	height: 1.5em;
+	padding-right: 1em;
+	vertical-align: middle;
 }
 img {
 	max-width: 80vw;
@@ -52,19 +58,17 @@ img {
 #profile-img {
 	width: 5.3em;
 	border-radius: 3em;
-}
-figure {
-	max-width: -webkit-min-content;
-	max-width: -moz-min-content;
-	max-width: min-content;
+	display: block;
+    margin: auto;
 }
 
 
 /*header*/
 header {
-	background-color: rgb(233, 235, 217);
+	background-color: rgb(159, 160, 140);
+	color: #3B3B3B;
 }
-header,nav > ul, nav li>a, footer > ul , main{
+header,nav > ul, footer > ul , main{
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
@@ -73,13 +77,26 @@ header,nav > ul ,footer > ul, main{
 	flex-wrap: wrap;
 }
 header nav li {
-	margin: 0.2rem;
+	margin: 0.5rem;
+	margin-top:1rem;
+	padding: 0.5rem;
+	-webkit-box-shadow: 0px 10px 10px -9px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 10px 10px -9px rgba(0,0,0,0.75);
+	box-shadow: 0px 10px 10px -9px rgba(0,0,0,0.75);
+}
+header nav li:last-of-type {
+	margin-bottom:1rem;
 }
 header figure {
-
+	width: 100%;
+}
+header a {
+	font-size: 1.2em;
+	font-weight: 600;
 }
 
 
+/*main*/
 main {
 	align-items: flex-start;
 }
@@ -87,19 +104,84 @@ main {
 
 /*article*/
 article {
-	max-width: 40em;
-	margin: 0.5rem;
+	width: 100%;
+	max-width: 35em;
 	background-color: rgb(233, 235, 217);
 }
 article > *{
 	padding: 0.5rem;
 }
+article header {
+	display: block;
+	background-color: #BFB189;
+}
 article figure {
-	width: min-content;
+	
 }
 
+
+/*form*/
+label {
+	display: inline-block;
+	margin-bottom: 1em;
+	padding-top: 1em;
+	padding-left: 1em;
+	background: #eef1f7;
+	width: 90%;
+}
+label span {
+	display: block;
+	color: #6a788d;
+	font-weight: 600;
+	margin-bottom: 1em;
+	margin-top: 0.5em;
+	font-size: 1em;
+}
+fieldset {
+	margin-bottom: 1.875em;
+	border: none;
+}
+legend {
+	padding: 0.5em;
+	margin-bottom: 1em;
+	background-color: #4B6D9F;
+	color: #eef1f7;
+	width: 100%;
+	font-weight: bold;
+}
+input {
+	width: 99%;
+	height: 3.333em;
+	margin-bottom: 1.6667em;
+	border: 1px solid #eee;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.1) inset;
+}
+[role="button"] {
+	border: none;
+	border-radius: 4px;
+	background-color: rgba(75, 109, 159, 1);
+	display: inline-block;
+	margin-bottom: 1.2em;
+	color: white;
+	font-weight: 600;
+	padding: 1em 1.2em;
+	cursor: pointer;
+
+	-webkit-transition: all .2s ease-in;
+	-moz-transition: all .2s ease-in;
+	transition: all .2s ease-in;
+}
+[role="button"]:hover {
+  background-color: rgba(90, 176, 238, 0.8);
+}
+
+
+/*profile article*/
 #profile-picture {
 	display: none;
+	max-width: -webkit-min-content;
+	max-width: -moz-min-content;
+	max-width: min-content;
 }
 #profile-picture img {
 	border-radius: 3em;
@@ -108,8 +190,14 @@ article figure {
 	animation: highlight 1s ease; 
 	display: block;
 }
+#profile-picture header {
+	width: 100%;
+    padding: 0.5rem; 
+    margin-left: -0.5rem;
+}
 
 
+/*pasword article*/
 #password {
 	position: absolute;
 	top: 7em;
@@ -125,8 +213,12 @@ article figure {
 #password header {
 	justify-content: space-between;
 }
+#password header a {
+	background-color: #C06161;
+}
 
 
+/*photos article*/
 #photo-albums {
 	display: none;
 }
@@ -142,6 +234,7 @@ article figure {
   	background-color: rgb(233, 235, 217); 
   }
 }
+
 
 /*footer*/
 footer {
@@ -168,5 +261,8 @@ footer > ul a {
 	}
 	img {
 		max-width: 35em;
+	}
+	header li ,header figure{ 
+		width: auto;
 	}
 }
